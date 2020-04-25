@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>VJTI Pointer Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body> 
+      <div class="rakh">
+      <header>
+        <div class="card w-75">
+            <div class="card-header bg-warning">VJTI Pointer Calculator</div>
+            <div class="card-body">
+                <form action="/action_page.php">
+                    <div class="form-group">
+                      <label for="DIA">DIA:</label>
+                      <input type="number" class="form-control w-15" placeholder="Enter DIA pointer" value="" id="DIA">
+                    </div>
+                    <div class="form-group">
+                      <label for="TOC">TOC:</label>
+                      <input   type="number" class="form-control w-15" placeholder="Enter TOC pointer" value="" id="TOC">
+                    </div>
+                    <div class="form-group">
+                        <label for="OS">OS:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter OS pointer" value="" id="OS">
+                      </div>
+                      <div class="form-group">
+                        <label for="DAA">DAA:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter DAA pointer" value="" id="DAA">
+                      </div>
+                      <div class="form-group">
+                        <label for="DBMS">DBMS:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter DBMS pointer" value="" id="DBMS">
+                      </div>
+                      <div class="form-group">
+                        <label for="OSL">OS Lab:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter OS Lab pointer" value="" id="OSL">
+                      </div>
+                      <div class="form-group">
+                        <label for="DBMSL">DBMS Lab:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter DBMS Lab pointer" value="" id="DBMSL">
+                      </div>
+                      <div class="form-group">
+                        <label for="IGT">IGT Lab:</label>
+                        <input   type="number" class="form-control w-15" placeholder="Enter IGT Lab pointer" value="" id="IGT">
+                      </div>
+                    <input type="button" onclick="ca()" class="btn btn-primary mt-2" value="Check Pointer">
+                  </form>
+                  <div><span class="pointer"><h3 id="pi"></h3></span></div>
+                    
+
+            </div>
+            <div class="card-footer">Sayush Kamat &copy;2020</div>
+          </div>
+      </header>
+    </div>
+      
+    <script>
+        function ca()
+        {
+            var dia=document.getElementById('DIA').value;
+            var toc=document.getElementById('TOC').value;
+            var os=document.getElementById('OS').value;
+            var daa=document.getElementById('DAA').value;
+            var dbms=document.getElementById('DBMS').value;
+            var osl=document.getElementById('OSL').value;
+            var dbmsl=document.getElementById('DBMSL').value;
+            var igt=document.getElementById('IGT').value;
+            if(dia=="")
+            {
+                alert('Are you ashamed of your DIA pointer');
+            }
+           else if(toc=="")
+            {
+                alert('Are you ashamed of your TOC pointer');
+            }
+            else if(os=="")
+            {
+                alert('Are you ashamed of your OS pointer');
+            }
+            else if(daa=="")
+            {
+                alert('Are you ashamed of your DAA pointer');
+            }
+            else if(dbms=="")
+            {
+                alert('Are you ashamed of your DBMS pointer');
+            }
+            else if(osl=="")
+            {
+                alert('Are you ashamed of your OS Lab pointer');
+            }
+            else if(dbmsl=="")
+            {
+                alert('Are you ashamed of your DBMS Lab pointer');
+            }
+            else if(igt=="")
+            {
+                alert('Are you ashamed of your IGT Lab pointer');
+            }
+            else
+            {
+                var pointer=(dia*4+toc*3+os*3+dbms*3+daa*3+igt*3+dbmsl*1+osl*1)/(4+3+3+3+3+3+2);
+                document.getElementById('pi').innerHTML= "your pointer is"+pointer;
+
+            }
+        }
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
